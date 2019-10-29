@@ -1,11 +1,10 @@
 # RxPermissions
 Android runtime permissions powered by RxJava
 
-[![](https://jitpack.io/v/CodyyAndroid/RxPermissions.svg)](https://jitpack.io/#CodyyAndroid/RxPermissions)
+[![](https://jitpack.io/v/codyy-mobile/RxPermissions.svg)](https://jitpack.io/#codyy-mobile/RxPermissions)
 
 To use this library your `minSdkVersion` must be >= 9.
-## TODO
-- 小米安全中心权限适配[AppOpsManager](https://www.jianshu.com/p/5fa0a149926d)
+
 ## How to
 **Step 1. Add the JitPack repository to your build file**
 
@@ -21,12 +20,11 @@ allprojects {
 **Step 2. Add the dependency**
 ```
 dependencies {
-	        //compile 'com.github.CodyyAndroid:RxPermissions:v1.0.2'//based on Rxjava 1.*
-	        //compile 'com.github.CodyyAndroid:RxPermissions:v2.0.3'//based on Rxjava2.*
-	        implementation 'com.github.CodyyAndroid:RxPermissions:v2.1.0'//based on Rxjava2.*
+	        implementation 'com.github.codyy-mobile:RxPermissions:v2.2.0' //based on Rxjava2.* and androidx
+	        //implementation 'com.github.CodyyAndroid:RxPermissions:v2.1.0'//based on Rxjava2.* and android support
 	}
 ```
-## [API](https://jitpack.io/com/github/CodyyAndroid/RxPermissions/v2.0.3/javadoc/)
+## [API](https://jitpack.io/com/github/codyy-mobile/RxPermissions/v2.2.0/javadoc/)
 ## Usage
 
 Create a `RxPermissions` instance :
