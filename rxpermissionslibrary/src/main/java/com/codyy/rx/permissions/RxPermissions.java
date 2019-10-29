@@ -21,10 +21,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import android.text.TextUtils;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,11 +44,11 @@ public class RxPermissions {
 
     private RxPermissionsFragment mRxPermissionsFragment;
 
-    public RxPermissions(@NonNull android.support.v4.app.FragmentManager fragmentManager) {
+    public RxPermissions(@NonNull FragmentManager fragmentManager) {
         mRxPermissionsFragment = getRxPermissionsFragment(fragmentManager);
     }
 
-    private RxPermissionsFragment getRxPermissionsFragment(@NonNull android.support.v4.app.FragmentManager fragmentManager) {
+    private RxPermissionsFragment getRxPermissionsFragment(@NonNull FragmentManager fragmentManager) {
         RxPermissionsFragment rxPermissionsFragment = findRxPermissionsFragment(fragmentManager);
         boolean isNewInstance = rxPermissionsFragment == null;
         if (isNewInstance) {
@@ -60,7 +62,7 @@ public class RxPermissions {
         return rxPermissionsFragment;
     }
 
-    private RxPermissionsFragment findRxPermissionsFragment(@NonNull android.support.v4.app.FragmentManager fragmentManager) {
+    private RxPermissionsFragment findRxPermissionsFragment(@NonNull FragmentManager fragmentManager) {
         return (RxPermissionsFragment) fragmentManager.findFragmentByTag(TAG);
     }
 
